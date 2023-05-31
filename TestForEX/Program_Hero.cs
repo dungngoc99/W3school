@@ -88,19 +88,15 @@ namespace TestForEX
                     }
                 }
 
-
             }
 
         }
         public class HeroA : Hero
         {
             public HeroA() : base(100, 20) { }
-
-
             public override int ManaQ()
             {
                 return 2;
-
             }
             public override void ActionQ(Hero[] targets)
             {
@@ -109,7 +105,6 @@ namespace TestForEX
                     i.Health -= 15;
                 }
             }
-
             public override int ManaW()
             {
                 return 3;
@@ -119,7 +114,6 @@ namespace TestForEX
                 this.Health = Math.Max(this.FullHealth, this.Health + 10);
                 this.Mana = Math.Max(this.FullMana, this.Mana + 5);
             }
-
             public override int ManaE()
             {
                 return 5;
@@ -128,12 +122,10 @@ namespace TestForEX
             {
                 targets[0].Health -= 30;
             }
-
             public override int ManaR()
             {
                 return 5;
             }
-
             public override void ActionR(Hero[] targets)
             {
                 foreach (Hero i in targets) { i.Health -= 30; }
@@ -142,7 +134,6 @@ namespace TestForEX
         public class HeroB : Hero
         {
             public HeroB() : base(80, 20) { }
-
             public override int ManaQ()
             {
                 return 3;
@@ -154,7 +145,6 @@ namespace TestForEX
                     i.Health -= 20;
                 }
             }
-
             public override int ManaW()
             {
                 return 3;
@@ -168,10 +158,8 @@ namespace TestForEX
                     {
                         targets[1].Health -= 10;
                     }
-
                 }
             }
-
             public override int ManaE()
             {
                 return 5;
@@ -181,12 +169,10 @@ namespace TestForEX
                 this.Health = Math.Max(this.Health + 20, this.FullHealth);
                 this.Mana = Math.Max(this.Mana + 5, this.FullMana);
             }
-
             public override int ManaR()
             {
                 return 0;
             }
-
             public override void ActionR(Hero[] targets)
             {
                 targets[0].Health -= 50;
@@ -194,8 +180,7 @@ namespace TestForEX
             }
         }
         static void Main(string[] args)
-        {
-        }
+        { }
 
     }
 

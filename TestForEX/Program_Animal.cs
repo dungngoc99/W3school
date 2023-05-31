@@ -42,15 +42,12 @@ namespace TestForEX
                     {
                          this.Distance += this.Speed() - 2;
                     }                    
-                }              
-                
+                }        
             }
 
-            public abstract int GetBurnCaloPerTime();
-           
+            public abstract int GetBurnCaloPerTime();          
 
             public abstract int GetCaloriesPerEat();
-
         }
         public class Dog : Animal
         {
