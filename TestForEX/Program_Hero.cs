@@ -63,37 +63,38 @@ namespace TestForEX
                 if (this.Mana > mana)
                 {
                     this.Mana -= mana;
+                    switch (skillName)
+                    {
+                        case "Q":
+                            {
+                                ActionQ(targets);
+                            }
+                            break;
+                        case "W":
+                            {
+                                ActionW(targets);
+                            }
+                            break;
+                        case "E":
+                            {
+                                ActionE(targets);
+                            }
+                            break;
+                        case "R":
+                            {
+                                ActionR(targets);
+                            }
+                            break;
+                    }
                 }
 
-                switch (skillName)
-                {
-                    case "Q":
-                        {
-                            ActionQ(targets);
-                        }
-                        break;
-                    case "W":
-                        {
-                            ActionW(targets);
-                        }
-                        break;
-                    case "E":
-                        {
-                            ActionE(targets);
-                        }
-                        break;
-                    case "R":
-                        {
-                            ActionR(targets);
-                        }
-                        break;
-                }
+
             }
 
         }
         public class HeroA : Hero
         {
-            public HeroA() : base(100,20) { }
+            public HeroA() : base(100, 20) { }
 
 
             public override int ManaQ()
@@ -103,12 +104,9 @@ namespace TestForEX
             }
             public override void ActionQ(Hero[] targets)
             {
-                if (this.Mana >= 2)
+                foreach (Hero i in targets)
                 {
-                    foreach (Hero i in targets)
-                    {
-                        i.Health -= 15;
-                    }
+                    i.Health -= 15;
                 }
             }
 
@@ -118,11 +116,8 @@ namespace TestForEX
             }
             public override void ActionW(Hero[] targets)
             {
-                if (this.Mana >= 3)
-                {
-                    this.Health = Math.Max(this.FullHealth, this.Health + 10);
-                    this.Mana = Math.Max(this.FullMana, this.Mana + 5);
-                }
+                this.Health = Math.Max(this.FullHealth, this.Health + 10);
+                this.Mana = Math.Max(this.FullMana, this.Mana + 5);
             }
 
             public override int ManaE()
@@ -131,10 +126,7 @@ namespace TestForEX
             }
             public override void ActionE(Hero[] targets)
             {
-                if (this.Mana >= 5)
-                {
-                    targets[0].Health -= 30;
-                }
+                targets[0].Health -= 30;
             }
 
             public override int ManaR()
@@ -144,15 +136,12 @@ namespace TestForEX
 
             public override void ActionR(Hero[] targets)
             {
-                if (this.Mana >= 5)
-                {
-                    foreach (Hero i in targets) { i.Health -= 30; }
-                }
+                foreach (Hero i in targets) { i.Health -= 30; }
             }
         }
         public class HeroB : Hero
         {
-            public HeroB() : base(80,20) { }
+            public HeroB() : base(80, 20) { }
 
             public override int ManaQ()
             {
@@ -160,12 +149,9 @@ namespace TestForEX
             }
             public override void ActionQ(Hero[] targets)
             {
-                if (this.Mana >= 3)
+                foreach (Hero i in targets)
                 {
-                    foreach (Hero i in targets)
-                    {
-                        i.Health -= 20;
-                    }
+                    i.Health -= 20;
                 }
             }
 
@@ -175,54 +161,44 @@ namespace TestForEX
             }
             public override void ActionW(Hero[] targets)
             {
-                if (this.Mana >= 3)
+                if (targets.Length >= 1)
                 {
-                    if (targets.Length >= 1)
+                    targets[0].Health -= 10;
+                    if (targets.Length >= 2)
                     {
-                        targets[0].Health -= 10;
-                        if (targets.Length >= 2)
-                        {
-                            targets[1].Health -= 10;
-                        }
+                        targets[1].Health -= 10;
                     }
+
                 }
             }
 
             public override int ManaE()
-            {                
+            {
                 return 5;
             }
             public override void ActionE(Hero[] targets)
             {
-                if (this.Mana >= 5)
-                {
-                    this.Health = Math.Max(this.Health + 20, this.FullHealth);
-                    this.Mana = Math.Max(this.Mana + 5, this.FullMana);
-                }
+                this.Health = Math.Max(this.Health + 20, this.FullHealth);
+                this.Mana = Math.Max(this.Mana + 5, this.FullMana);
             }
 
             public override int ManaR()
-            {               
+            {
                 return 0;
             }
 
             public override void ActionR(Hero[] targets)
             {
-                if (this.Mana >= 0)
-                {
-                    targets[0].Health -= 50;
-                    this.Mana = this.FullMana;
-                }
+                targets[0].Health -= 50;
+                this.Mana = this.FullMana;
             }
         }
         static void Main(string[] args)
         {
-            var Hero_A = new HeroA(80, 20);
-            var Hero_B = new HeroB(80, 20);
         }
 
     }
-   
+
 }
 
 
