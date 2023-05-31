@@ -12,8 +12,7 @@ namespace TestForEX
         {
             public string Name { get; set; }
             public int Age { get; set; }
-            public abstract int Speed();
-            public abstract int InitialCalories();
+            
             public int Calories { get; private set; }
             public int Distance { get; private set; }
             public Animal(string name, int age)
@@ -23,6 +22,8 @@ namespace TestForEX
                 this.Calories = this.InitialCalories();
                 
             }
+            public abstract int Speed();
+            public abstract int InitialCalories();
             public int Eat()
             {
                 return this.Calories = this.Calories + this.GetCaloriesPerEat() - this.GetBurnCaloPerTime();
@@ -45,7 +46,8 @@ namespace TestForEX
                 
             }
 
-            public abstract int GetBurnCaloPerTime();           
+            public abstract int GetBurnCaloPerTime();
+           
 
             public abstract int GetCaloriesPerEat();
 
