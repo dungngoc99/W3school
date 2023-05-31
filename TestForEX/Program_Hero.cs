@@ -20,6 +20,8 @@ namespace TestForEX
             {
                 this.Health = health;
                 this.Mana = mana;
+                this.FullHealth = health;
+                this.FullMana = mana;
             }
             public abstract int ManaQ();
             public abstract int ManaW();
@@ -91,7 +93,7 @@ namespace TestForEX
         }
         public class HeroA : Hero
         {
-            public HeroA(int health, int mana) : base(health, mana) { }
+            public HeroA() : base(100,20) { }
 
 
             public override int ManaQ()
@@ -150,7 +152,7 @@ namespace TestForEX
         }
         public class HeroB : Hero
         {
-            public HeroB(int health, int mana) : base(health, mana) { }
+            public HeroB() : base(80,20) { }
 
             public override int ManaQ()
             {

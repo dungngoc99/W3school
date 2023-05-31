@@ -14,51 +14,38 @@ namespace TestForEX
             public int Age { get; set; }
             public abstract int Speed();
             public abstract int InitialCalories();
-            int Calories = 0;
-            int Distance = 0;
-
-            public int Eat()
-            {
-                return this.Calories = this.Calories + this.GetCaloriesPerEat() + this.InitialCalories();
-            }
-
-            public int TotalCaloriesAfterAll()
-            {
-                return this.Calories = this.Eat() - this.GetBurnCaloPerTime();
-            }
-
+            public int Calories { get; private set; }
+            public int Distance { get; private set; }
             public Animal(string name, int age)
             {
                 this.Name = name;
                 this.Age = age;
+                this.Calories = this.InitialCalories();
+                
             }
-            public int Run()
+            public int Eat()
             {
-                if (TotalCaloriesAfterAll() >= 0)
+                return this.Calories = this.Calories + this.GetCaloriesPerEat() - this.GetBurnCaloPerTime();
+            }
+
+                       
+            public void Run()
+            {
+                if (this.Calories >= 0)
                 {
                     if(this.Age>=30 && this.Age <= 40)
                     {
-                        return this.Distance += this.Speed() - 1;
+                         this.Distance += this.Speed() - 1;
                     }
                     if (this.Age > 40)
                     {
-                        return this.Distance += this.Speed() - 2;
-                    }
-                    else
-                    {
-                        return this.Distance;
-                    }
-                }
-                else
-                {
-                    return this.Distance;
-                }
+                         this.Distance += this.Speed() - 2;
+                    }                    
+                }              
                 
             }
 
-            public abstract int GetBurnCaloPerTime();
-
-           
+            public abstract int GetBurnCaloPerTime();           
 
             public abstract int GetCaloriesPerEat();
 
