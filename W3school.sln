@@ -15,15 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5.Araray", "5.Araray\5.Arar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{04900AC9-250B-4532-830D-2702B2E86E6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.Methods", "5.Methods\5.Methods.csproj", "{3FDE74D6-9DB9-4514-AB1C-A81C7EB62AFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5.Methods", "5.Methods\5.Methods.csproj", "{3FDE74D6-9DB9-4514-AB1C-A81C7EB62AFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject2", "TestProject2\TestProject2.csproj", "{21DBC2FF-D176-4B29-8020-B91DE2C8BE8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject2", "TestProject2\TestProject2.csproj", "{21DBC2FF-D176-4B29-8020-B91DE2C8BE8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex", "Ex\Ex.csproj", "{4A728974-2A18-42E3-AB69-55366950073A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex", "Ex\Ex.csproj", "{4A728974-2A18-42E3-AB69-55366950073A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.Function", "6.Function\6.Function.csproj", "{74D24DBD-6F2E-4621-98C2-083ED75B8EA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6.Function", "6.Function\6.Function.csproj", "{74D24DBD-6F2E-4621-98C2-083ED75B8EA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForEX", "TestForEX\TestForEX.csproj", "{FB8105E9-7B2E-46F7-89AC-121ECCDA98BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestForEX", "TestForEX\TestForEX.csproj", "{FB8105E9-7B2E-46F7-89AC-121ECCDA98BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.OOP", "7.OOP\7.OOP.csproj", "{C0C61768-8498-4262-AD4D-BDD80B1C88C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{FB8105E9-7B2E-46F7-89AC-121ECCDA98BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB8105E9-7B2E-46F7-89AC-121ECCDA98BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB8105E9-7B2E-46F7-89AC-121ECCDA98BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C61768-8498-4262-AD4D-BDD80B1C88C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C61768-8498-4262-AD4D-BDD80B1C88C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C61768-8498-4262-AD4D-BDD80B1C88C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C61768-8498-4262-AD4D-BDD80B1C88C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

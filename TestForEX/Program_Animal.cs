@@ -32,7 +32,8 @@ namespace TestForEX
                        
             public void Run()
             {
-                if (this.Calories - this.GetBurnCaloPerTime() >= 0)
+                int finalCalories = this.Calories - GetBurnCaloPerTime();
+                if (finalCalories >= 0)
                 {
                     if(this.Age>=30 && this.Age <= 40)
                     {
@@ -41,7 +42,8 @@ namespace TestForEX
                     if (this.Age > 40)
                     {
                          this.Distance += this.Speed() - 2;
-                    }                    
+                    }
+                    this.Calories = finalCalories;
                 }        
             }
 
